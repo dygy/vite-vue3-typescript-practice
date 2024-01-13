@@ -1,12 +1,12 @@
 <script setup lang="ts">
-  import { ref } from 'vue'
-  import Options from "./options.vue";
-  import Composition from "./composition.vue";
-  defineProps<{ msg: string }>()
-  const count = ref(0)
-  function isEven(n: number) {
-    return n % 2 == 0;
-  }
+import { ref } from "vue";
+import Options from "./options.vue";
+import Composition from "./composition.vue";
+defineProps<{ msg: string }>();
+const count = ref(0);
+function isEven(n: number) {
+  return n % 2 == 0;
+}
 </script>
 
 <template>
@@ -22,7 +22,7 @@
 </template>
 
 <style scoped>
-  div {
-    background: indigo;
-  }
+div {
+  background: indigo;
+}
 </style>

@@ -1,9 +1,9 @@
 <script lang="ts">
-import {defineComponent} from 'vue'
+import { defineComponent } from "vue";
 
 export default defineComponent({
-  name: "composition"
-})
+  name: "composition",
+});
 </script>
 
 <template>
@@ -11,7 +11,7 @@ export default defineComponent({
 </template>
 
 <style scoped>
-  p {
-    color: white;
-  }
+p {
+  color: white;
+}
 </style>

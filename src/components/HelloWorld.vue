@@ -4,7 +4,7 @@
   import Composition from "./composition.vue";
   defineProps<{ msg: string }>()
   const count = ref(0)
-  function isEven(n) {
+  function isEven(n: number) {
     return n % 2 == 0;
   }
 </script>

@@ -1,28 +1,28 @@
 <script setup lang="ts">
-import { ref } from "vue";
 import Options from "./options.vue";
 import Composition from "./composition.vue";
+import { useCounterStore } from "../store/counter.ts";
+import { computed } from "vue";
 defineProps<{ msg: string }>();
-const count = ref(0);
-function isEven(n: number) {
-  return n % 2 == 0;
-}
+const store = useCounterStore();
+const isEven = computed(() => store.isEven);
+const count = computed(() => store.count);
 </script>
 
 <template>
-  <h1>{{ msg }}</h1>
+    <h1>{{ msg }}</h1>
 
-  <div class="card">
-    <button type="button" @click="count++">count is {{ count }}</button>
-    <keep-alive>
-      <options v-if="isEven(count)" />
-      <composition v-else />
-    </keep-alive>
-  </div>
+    <div class="card">
+        <button type="button" @click="store.increment">count is {{ count }}</button>
+        <keep-alive>
+            <options v-if="isEven" />
+            <composition v-else />
+        </keep-alive>
+    </div>
 </template>
 
 <style scoped>
 div {
-  background: indigo;
+    background: indigo;
 }
 </style>

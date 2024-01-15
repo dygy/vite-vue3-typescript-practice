@@ -5,6 +5,7 @@ import { createPinia } from "pinia";
 import "./style.css";
 import HelloWorld from "./components/HelloWorld.vue";
 import App from "./App.vue";
+import { Button } from "vant";
 
 const app = createApp(App);
 
@@ -21,4 +22,5 @@ const pinia = createPinia();
 
 app.use(pinia);
 app.use(router);
+app.use(Button);
 app.mount("#app");

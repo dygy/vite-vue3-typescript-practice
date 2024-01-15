@@ -13,9 +13,6 @@ describe("mount component", async () => {
             global: {
                 plugins: [createTestingPinia()],
             },
-            props: {
-                msg: "",
-            },
         });
         const store = useCounterStore(); // uses the testing pinia!
 

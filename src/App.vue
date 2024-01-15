@@ -1,14 +1,7 @@
-<script lang="ts">
-import HelloWorld from "./components/HelloWorld.vue";
-
-export default {
-    name: "App",
-    components: { HelloWorld },
-    methods: {},
-};
-</script>
+<script setup lang="ts"></script>
 
 <template>
+    <router-view> </router-view>
     <div>
         <a href="https://vitejs.dev" target="_blank">
             <img src="/vite.svg" class="logo" alt="Vite logo" />
@@ -17,7 +10,6 @@ export default {
             <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
         </a>
     </div>
-    <HelloWorld msg="Vite + Vue" />
 </template>
 
 <style scoped>

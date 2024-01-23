@@ -21,7 +21,7 @@ const [field, fieldProps] = defineField("field");
 
 <template>
     <div class="card">
-        <VanButton type="primary" @click="store.increment"> count is {{ count }} </VanButton>
+        <VanButton id="increment" type="primary" @click="store.increment"> count is {{ count }} </VanButton>
         <input v-model="field" v-bind="fieldProps" />
         <span class="error">{{ errors.field }}</span>
         <VanButton type="danger" @click="handleSubmit"> submit </VanButton>
